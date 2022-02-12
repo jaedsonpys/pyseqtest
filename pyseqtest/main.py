@@ -70,7 +70,8 @@ class SeqTest(object):
 
     def is_true(self, condition: Any, msg_error: str = None) -> None:
         if not condition:
-            print('\n')
+            print('=' * 30)
+
             if msg_error:
                 print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
             else:
@@ -82,7 +83,8 @@ class SeqTest(object):
 
     def is_false(self, condition: Any, msg_error: str = None) -> None:
         if condition is not False:
-            print('\n')
+            print('=' * 30)
+
             if msg_error:
                 print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
             else:
@@ -94,7 +96,8 @@ class SeqTest(object):
 
     def is_none(self, condition: Any, msg_error: str = None) -> None:
         if condition is not None:
-            print('\n')
+            print('=' * 30)
+
             if msg_error:
                 print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
             else:
