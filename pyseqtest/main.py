@@ -17,7 +17,7 @@ class SeqTest(object):
         self._last_test = None
         self._tests_exec = 0
 
-    def _run_test(self, method_test: Callable):
+    def _run_test(self, method_test: Callable) -> None:
         method_name = method_test.__name__
         self._last_test = method_name
 
@@ -37,7 +37,7 @@ class SeqTest(object):
         """
 
         print('PySeqTest')
-        print('=========\n')
+        print('=========')
 
         def filter_methods(x) -> list:
             methods = []
