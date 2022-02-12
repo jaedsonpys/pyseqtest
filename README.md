@@ -4,10 +4,18 @@ O PySeqTest foi criado pensando em testes em sequência, executando os testes um
 testamos algo que envolve arquivos, banco de dados, conexões a rede, etc. O objetivo do `pyseqtest` é ser simples, com verificações
 de valores boleanos, comparações e exceções.
 
-##### Info
+### Info
 
 - Version: 1.0.0
 - Nome do pacote: pyseqtest
+
+## Instalação
+
+Para realizar a instalação do `pyseqtest`, utilize o gerenciador de pacotes `PIP`:
+
+```shell
+pip install pyseqtest
+```
 
 ## Exemplo de uso
 
