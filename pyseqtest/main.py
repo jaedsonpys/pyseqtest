@@ -58,5 +58,19 @@ class SeqTest(object):
             print(f'finished in {finish_time}')
 
 
+class Test(SeqTest):
+    def __init__(self):
+        super().__init__()
+
+    def test_database(self):
+        sleep(2)
+
+    def test_database_2(self):
+        sleep(2)
+
+    def test_database_3(self):
+        sleep(2)
+
+
 if __name__ == '__main__':
-    SeqTest().run()
+    Test().run()
