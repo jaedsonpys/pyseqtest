@@ -92,6 +92,10 @@ class SeqTest(object):
         result = _check_result(condition, None, f'{self._last_test}: {msg_error}')
         self._tests_exec += 1 if result else exit()
 
+    def check_any_value(self, condition: Any, expected: Any, msg_error: str = None) -> None:
+        result = _check_result(condition, expected, f'{self._last_test}: {msg_error}')
+        self._tests_exec += 1 if result else exit()
+
 
 if __name__ == '__main__':
     SeqTest().run()
