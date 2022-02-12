@@ -1,6 +1,8 @@
 from datetime import datetime
 from time import sleep
 
+from typing import Callable
+
 
 class SeqTest(object):
     """
@@ -12,6 +14,19 @@ class SeqTest(object):
 
     def __init__(self):
         self._last_test = None
+
+    def _run_test(self, method_test: Callable):
+        method_name = method_test.__name__
+        self._last_test = method_name
+
+        print(f'{method_name}... ', end='')
+        start_time = datetime.now()
+
+        # run test
+        method_test()
+
+        finish_time = datetime.now() - start_time
+        print(f'finished in {finish_time}')
 
     def run(self) -> None:
         """Start tests.
@@ -47,15 +62,7 @@ class SeqTest(object):
 
         # run tests
         for test in methods_test:
-            test_name = test.__name__
-            print(f'{test_name}... ', end='')
-
-            self._last_test = test_name
-            start_time = datetime.now()
-
-            test()
-            finish_time = datetime.now() - start_time
-            print(f'finished in {finish_time}')
+            self._run_test(test)
 
 
 class Test(SeqTest):
