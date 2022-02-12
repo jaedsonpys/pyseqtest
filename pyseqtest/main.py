@@ -76,7 +76,7 @@ class SeqTest(object):
             if msg_error:
                 print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
             else:
-                print(f'\033[31m[ ERROR ]\033[m{self._last_test}: Condition is not True')
+                print(f'\033[31m[ ERROR ]\033[m{self._last_test}: Condição não é verdadeira')
 
             exit(0)
 
