@@ -34,7 +34,7 @@ class SeqTest(object):
         self._last_test = method_name
 
         start_time = datetime.now()
-        method_test() # run test
+        method_test()  # run test
 
         finish_time = datetime.now() - start_time
         print(f'{finish_time}: {method_name}')
