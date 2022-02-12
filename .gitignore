@@ -3,3 +3,4 @@ __pycache__
 project.md
 pyseqtest.egg-info
 dist
+build
