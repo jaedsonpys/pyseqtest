@@ -21,14 +21,11 @@ class SeqTest(object):
         method_name = method_test.__name__
         self._last_test = method_name
 
-        print(f'{method_name}... ', end='')
         start_time = datetime.now()
-
-        # run test
-        method_test()
+        method_test() # run test
 
         finish_time = datetime.now() - start_time
-        print(f'finished in {finish_time}')
+        print(f'{finish_time}: {method_name}')
 
     def run(self) -> None:
         """Start tests.
@@ -67,6 +64,7 @@ class SeqTest(object):
             self._run_test(test)
 
         # finish all tests
+        print('=' * 30)
         print(f'\nAfirmações: {self._tests_exec}')
         print('\033[32m[ OK ]\033[m Testes finalizados')
 
