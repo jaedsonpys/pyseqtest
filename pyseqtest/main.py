@@ -78,43 +78,16 @@ class SeqTest(object):
         print('\033[32m[ OK ]\033[m Testes finalizados')
 
     def is_true(self, condition: Any, msg_error: str = None) -> None:
-        if not condition:
-            print('=' * 30)
-
-            if msg_error:
-                print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
-            else:
-                print(f'\033[31m[ ERROR ]\033[m{self._last_test}: Condição não é verdadeira')
-
-            exit(0)
-
-        self._tests_exec += 1
+        result = _check_result(condition, True, f'{self._last_test}: {msg_error}')
+        self._tests_exec += 1 if result else exit()
 
     def is_false(self, condition: Any, msg_error: str = None) -> None:
-        if condition is not False:
-            print('=' * 30)
-
-            if msg_error:
-                print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
-            else:
-                print(f'\033[31m[ ERROR ]\033[m{self._last_test}: Condição não é falsa')
-
-            exit(0)
-
-        self._tests_exec += 1
+        result = _check_result(condition, False, f'{self._last_test}: {msg_error}')
+        self._tests_exec += 1 if result else exit()
 
     def is_none(self, condition: Any, msg_error: str = None) -> None:
-        if condition is not None:
-            print('=' * 30)
-
-            if msg_error:
-                print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
-            else:
-                print(f'\033[31m[ ERROR ]\033[m{self._last_test}: Condição não retorna None')
-
-            exit(0)
-
-        self._tests_exec += 1
+        result = _check_result(condition, None, f'{self._last_test}: {msg_error}')
+        self._tests_exec += 1 if result else exit()
 
 
 if __name__ == '__main__':
