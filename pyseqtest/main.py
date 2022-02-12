@@ -2,6 +2,7 @@ from datetime import datetime
 from time import sleep
 
 from typing import Callable
+from typing import Any
 
 
 class SeqTest(object):
@@ -14,6 +15,7 @@ class SeqTest(object):
 
     def __init__(self):
         self._last_test = None
+        self._tests_exec = 0
 
     def _run_test(self, method_test: Callable):
         method_name = method_test.__name__
@@ -63,6 +65,18 @@ class SeqTest(object):
         # run tests
         for test in methods_test:
             self._run_test(test)
+
+    def is_true(self, condition: Any, msg_error: str = None) -> None:
+        if not condition:
+            print('\n')
+            if msg_error:
+                print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
+            else:
+                print(f'\033[31m[ ERROR ]\033[m{self._last_test}: Condition is not True')
+
+            exit(0)
+
+        self._tests_exec += 1
 
 
 class Test(SeqTest):
