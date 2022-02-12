@@ -80,20 +80,50 @@ class SeqTest(object):
         print(f'\nAfirmações: {self._tests_exec}')
         print('\033[32m[ OK ]\033[m Testes finalizados')
 
-    def is_true(self, condition: Any, msg_error: str = None) -> None:
-        result = _check_result(condition, True, f'{self._last_test}: {msg_error}')
+    def is_true(self, value: Any, msg_error: str = None) -> None:
+        """Checks if the value is True.
+
+        :param value: Value to check
+        :param msg_error:
+        :return:
+        """
+
+        result = _check_result(value, True, f'{self._last_test}: {msg_error}')
         self._tests_exec += 1 if result else exit()
 
-    def is_false(self, condition: Any, msg_error: str = None) -> None:
-        result = _check_result(condition, False, f'{self._last_test}: {msg_error}')
+    def is_false(self, value: Any, msg_error: str = None) -> None:
+        """Checks if the value is False.
+
+        :param value: Value to check
+        :param msg_error:
+        :return:
+        """
+
+        result = _check_result(value, False, f'{self._last_test}: {msg_error}')
         self._tests_exec += 1 if result else exit()
 
-    def is_none(self, condition: Any, msg_error: str = None) -> None:
-        result = _check_result(condition, None, f'{self._last_test}: {msg_error}')
+    def is_none(self, value: Any, msg_error: str = None) -> None:
+        """Checks if the value is None.
+
+        :param value: Value to check
+        :param msg_error:
+        :return:
+        """
+
+        result = _check_result(value, None, f'{self._last_test}: {msg_error}')
         self._tests_exec += 1 if result else exit()
 
-    def check_any_value(self, condition: Any, expected: Any, msg_error: str = None) -> None:
-        result = _check_result(condition, expected, f'{self._last_test}: {msg_error}')
+    def check_any_value(self, value: Any, expected: Any, msg_error: str = None) -> None:
+        """Checks whether the value is
+        the same as expected.
+
+        :param value: Value to be compared
+        :param expected: Value expected
+        :param msg_error: Message if the comparison is false
+        :return: None
+        """
+
+        result = _check_result(value, expected, f'{self._last_test}: {msg_error}')
         self._tests_exec += 1 if result else exit()
 
 
