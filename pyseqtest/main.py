@@ -94,6 +94,18 @@ class SeqTest(object):
 
         self._tests_exec += 1
 
+    def is_none(self, condition: Any, msg_error: str = None) -> None:
+        if condition is not None:
+            print('\n')
+            if msg_error:
+                print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg_error}')
+            else:
+                print(f'\033[31m[ ERROR ]\033[m{self._last_test}: Condição não retorna None')
+
+            exit(0)
+
+        self._tests_exec += 1
+
 
 class Test(SeqTest):
     def __init__(self):
