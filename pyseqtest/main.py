@@ -5,6 +5,10 @@ from typing import Callable
 from typing import Any
 
 
+def _check_result(result: Any, expected: Any) -> bool:
+    return True if result == expected else False
+
+
 class SeqTest(object):
     """
     Teste em sequência.
