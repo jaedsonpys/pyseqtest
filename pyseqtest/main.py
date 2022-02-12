@@ -5,8 +5,13 @@ from typing import Callable
 from typing import Any
 
 
-def _check_result(result: Any, expected: Any) -> bool:
-    return True if result == expected else False
+def _check_result(result: Any, expected: Any, msg: str) -> bool:
+    if result != expected:
+        print('=' * 30)
+        print(f'\033[31m[ ERROR ]\033[m {msg}')
+        return False
+
+    return True
 
 
 class SeqTest(object):
