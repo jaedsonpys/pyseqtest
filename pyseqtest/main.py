@@ -66,6 +66,10 @@ class SeqTest(object):
         for test in methods_test:
             self._run_test(test)
 
+        # finish all tests
+        print(f'\nAfirmações: {self._tests_exec}')
+        print('\033[32m[ OK ]\033[m Testes finalizados')
+
     def is_true(self, condition: Any, msg_error: str = None) -> None:
         if not condition:
             print('\n')
