@@ -7,12 +7,6 @@ envolve arquivos, banco de dados, conexões a rede, etc. O objetivo do
 ``pyseqtest`` é ser simples, com verificações de valores boleanos,
 comparações e exceções.
 
-Info
-''''
-
--  Version: 1.0.0
--  Nome do pacote: pyseqtest
-
 Exemplo de uso
 --------------
 
@@ -104,10 +98,3 @@ de entrada, e o valor de saída esperado. Veja um exemplo:
        # de saída esperado.
 
 Neste exemplo, um erro seria retornado, já que 15 não é igual a 10.
-
-Licença
--------
-
-Este projeto utiliza a ``GNU General Public License v3.0``
-
-``made with python by Jaedson``
