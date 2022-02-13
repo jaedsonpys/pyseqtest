@@ -4,3 +4,4 @@ project.md
 pyseqtest.egg-info
 dist
 build
+.idea
