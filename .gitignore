@@ -5,3 +5,4 @@ pyseqtest.egg-info
 dist
 build
 .idea
+*.egg-info
