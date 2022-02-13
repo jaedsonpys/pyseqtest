@@ -88,7 +88,7 @@ class SeqTest(object):
         :return:
         """
 
-        result = _check_result(value, True, f'{self._last_test}: {msg_error}')
+        result = _check_result(value, True, msg_error)
         self._tests_exec += 1 if result else exit()
 
     def is_false(self, value: Any, msg_error: str = None) -> None:
@@ -99,7 +99,7 @@ class SeqTest(object):
         :return:
         """
 
-        result = _check_result(value, False, f'{self._last_test}: {msg_error}')
+        result = _check_result(value, False, msg_error)
         self._tests_exec += 1 if result else exit()
 
     def is_none(self, value: Any, msg_error: str = None) -> None:
@@ -110,7 +110,7 @@ class SeqTest(object):
         :return:
         """
 
-        result = _check_result(value, None, f'{self._last_test}: {msg_error}')
+        result = _check_result(value, None, msg_error)
         self._tests_exec += 1 if result else exit()
 
     def check_any_value(self, value: Any, expected: Any, msg_error: str = None) -> None:
@@ -123,7 +123,7 @@ class SeqTest(object):
         :return: None
         """
 
-        result = _check_result(value, expected, f'{self._last_test}: {msg_error}')
+        result = _check_result(value, expected, msg_error)
         self._tests_exec += 1 if result else exit()
 
 
