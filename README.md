@@ -14,7 +14,7 @@ de valores boleanos, comparações e exceções.
 Para realizar a instalação do `pyseqtest`, utilize o gerenciador de pacotes `PIP`:
 
 ```shell
-pip install pyseqtest
+pip install PySeqTest
 ```
 
 ## Exemplo de uso
