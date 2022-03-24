@@ -31,9 +31,9 @@ class SeqTest(object):
             print('=' * 30)
 
             if not msg:
-                print(f'\033[31m[ ERROR ]\033[m {expected} is not {result}')
+                print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {expected} is not {result}')
             else:
-                print(f'\033[31m[ ERROR ]\033[m {msg}')
+                print(f'\033[31m[ ERROR ]\033[m {self._last_test}: {msg}')
             return False
 
         return True
