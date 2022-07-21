@@ -10,6 +10,8 @@ Para realizar a instalação do `pyseqtest`, utilize o gerenciador de pacotes `P
 pip install PySeqTest
 ```
 
+> Existe um **novo** teste unitário melhor e mais útil, veja mais [sobre o BupyTest](https://github.com/jaedsonpys/bupytest)
+
 ## Exemplo de uso
 
 Vamos começar a utilizar o PySeqTest! Neste primeiro exemplo, faremos o teste de uma simples calculadora. Veja o código:
