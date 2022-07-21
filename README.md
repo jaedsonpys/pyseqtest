@@ -10,7 +10,7 @@ Para realizar a instalação do `pyseqtest`, utilize o gerenciador de pacotes `P
 pip install PySeqTest
 ```
 
-> Existe um **novo** teste unitário melhor e mais útil, veja mais [sobre o BupyTest](https://github.com/jaedsonpys/bupytest)
+Existe um **novo** teste unitário melhor e mais útil, veja mais [sobre o BuPyTest](https://github.com/jaedsonpys/bupytest) em meu GitHub.
 
 ## Exemplo de uso
 
